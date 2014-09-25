@@ -98,7 +98,7 @@ Vagrant.configure("2") do |config|
   # If using VirtualBox
   config.vm.provider :virtualbox do |vb|
 
-    vb.name = "Vaprobash"
+    vb.name = "SPARCpress"
 
     # Set server memory
     vb.customize ["modifyvm", :id, "--memory", server_memory]
