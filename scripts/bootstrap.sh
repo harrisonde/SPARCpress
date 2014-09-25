@@ -68,7 +68,7 @@ fetchPackage $RES
 # -------------
 cd /vagrant/ 
 if [  -d wordpress ]; then
-	echo "WordPress directory exists !!!" && exit 0
+	echo "WordPress directory exists !!!"
 else
 	echo "Creating clean WordPress directory ..."
 	sudo cp -r WordPress-master/* wordpress && rm -fr WordPress-master
