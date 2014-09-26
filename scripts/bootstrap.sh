@@ -66,12 +66,17 @@ fetchPackage $RES
 
 # CLEAN UP
 # -------------
-cd /vagrant/ 
-if [  -d wordpress ]; then
+cd /vagrant 
+
+if [ -d wordpress ]; then
 	echo "WordPress directory exists !!!"
+	sudo cp -r WordPress-master/* wordpress  
+	sudo rm -fr WordPress-master
 else
 	echo "Creating clean WordPress directory ..."
-	sudo cp -r WordPress-master/* wordpress && rm -fr WordPress-master
+	mkdir wordpress
+	sudo cp -r WordPress-master/* wordpress  
+	sudo rm -fr WordPress-master
 fi 
 
 # MYSQL
