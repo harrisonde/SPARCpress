@@ -3,12 +3,20 @@
 # Provisioned for Vagrant and WordPress
 ##
 
+# Bower 
+# ------------------------------
+bower_components/*
+
 # Default
 # ------------------------------
 *~
 .DS_Store
 *.bak
 Thumbs.db
+
+# Node 
+# ------------------------------
+node_modules/*
 
 # Sass cache
 # ------------------------------
