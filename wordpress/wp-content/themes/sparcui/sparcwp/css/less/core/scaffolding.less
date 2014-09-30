@@ -1,0 +1,39 @@
+body {
+  font-family: @font-family-base;
+  font-size: @font-size-base;
+  font-weight: 300;
+  line-height: @line-height-base;
+  color: @text-color;
+  background-color: transparent;
+}
+
+a {
+  color: @link-color;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: @link-hover-color;
+    text-decoration: underline;
+	}
+}
+b, strong {
+	font-weight: 600;
+}
+
+
+p {
+  line-height: @line-height-base;
+}
+
+
+/* Images and wp-captions should always fit and be responsive */
+img {
+  display: inline-block;
+  height: auto;
+  max-width: 100%;
+}
+img[class*="wp-image-"] {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}

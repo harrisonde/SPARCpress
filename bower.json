@@ -1,0 +1,10 @@
+{
+  "name": "your-project-name",
+  "version": "0.0.0",
+  "dependencies": {
+    "wordpress" : "git://github.com/WordPress/WordPress.git",
+    "woocommerce" : "git://github.com/woothemes/woocommerce.git",
+    "sparcui" : "git://github.com/sparcedge/Sparc-UI-wordpress.git"
+  },
+  "private": true
+}

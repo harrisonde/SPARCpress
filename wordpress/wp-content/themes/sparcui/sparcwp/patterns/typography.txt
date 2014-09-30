@@ -1,0 +1,1 @@
+The body has a base font-size of 1.6rem (16px). Try and use rems for font-sizes (which will be a multiple of 10 for px, ie. if you want a font size of 22px it will be 2.2rem.
