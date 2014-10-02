@@ -14,7 +14,7 @@ Va​grant and WordPress Pro​visioning Bash Scripts
 
 SPARCpress ships with a loose WordPress configuration. If you plan to use SPARCpress outside a development environment you must tighten the configuration. The configuration settings are found in gruntfile.js
 
-Helpful Vagrant Commands
+###Helpful Vagrant Commands
 	1. Start a Vagrant box
 		1. vagrant up
 	2. Stop a Vagrant box
