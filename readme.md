@@ -14,14 +14,14 @@ A mo'better workflow
 
 # Configurations
 ## Copy
-[Grunt-copy][https://www.npmjs.com/package/grunt-copy] moves dependencies from bower_components to the proper WordPress directory e.g., core, pluings, and themes. If you plan to add or modify Bower dependencies, make sure to update the copy task.
+[Grunt-copy](https://www.npmjs.com/package/grunt-copy) moves dependencies from bower_components to the proper WordPress directory e.g., core, pluings, and themes. If you plan to add or modify Bower dependencies, make sure to update the copy task.
 
 ## WordPress
 SPARCpress ships with a loose WordPress configuration. If you plan to use SPARCpress outside a development environment you must tighten the configuration. The configuration settings are found in gruntfile.
 
 ## Pushing
 ### SFTP
-SPARCpress uses a [sftp-deploy][https://www.npmjs.com/package/grunt-sftp-deploy] task for code deployment over the sftp protocol. Before deploy you need to update the sftp-deploy configuration in your grunt file. 
+SPARCpress uses a [sftp-deploy](https://www.npmjs.com/package/grunt-sftp-deploy) task for code deployment over the sftp protocol. Before deploy you need to update the sftp-deploy configuration in your grunt file. 
 
 To deploy:
 	1. Open Terminal and cd the SPARCpress directory
