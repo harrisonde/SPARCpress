@@ -13,3 +13,4 @@ npm install -g bower
 
 # Grunt
 npm install -g grunt-cli
+npm i -g grunt-init
