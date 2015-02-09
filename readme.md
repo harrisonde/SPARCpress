@@ -21,14 +21,53 @@ SPARCpress ships with a loose WordPress configuration. If you plan to use SPARCp
 
 ## Pushing
 ### SFTP
-SPARCpress uses a [sftp-deploy](https://www.npmjs.com/package/grunt-sftp-deploy) task for code deployment over the sftp protocol. Before deploy you need to update the sftp-deploy configuration in your grunt file. 
+SPARCpress uses a [sftp-deploy](https://www.npmjs.com/package/grunt-sftp-deploy) task for code deployment over the sftp protocol. Before deploy you need to update the sftp-deploy configuration in your grunt file and add `.ftppass` file at the root of the project. The `.ftppass` will be omitted from source control.
 
-To deploy:
+Usernames, passwords, and private key references are stored as a JSON object either in a file named .ftppass. Please update the `.ftppass` file with your username and password. 
+
+```javascript
+{
+  "key1": {
+    "username": "username1",
+    "password": "password1"
+  },
+  "key2": {
+    "username": "username2",
+    "password": "password2"
+  },
+  "privateKey": {
+    "username": "username"
+  },
+  "privateKeyEncrypted": {
+    "username": "username",
+    "passphrase": "passphrase1"
+  },
+  "privateKeyCustom": {
+    "username": "username",
+    "passphrase": "passphrase1",
+    "keyLocation": "/full/path/to/key"
+  },
+  "privateKeyCustomByFileName": {
+    "username": "username",
+    "passphrase": "passphrase2",
+    "keyLocation": "filename-of-key"
+  },
+  "sshAgentSocket": {
+    "username": "username",
+    "agent": true
+  },
+  "pageant": {
+    "username": "username",
+    "agent": "pageant"
+  }
+}
+```
+
+#### To deploy to SFTP server:
+
 	1. Open Terminal and cd the SPARCpress directory
 	2. $ vagrant ssh
 	3. $ grunt sftp-deploy
-
-Usernames, passwords, and private key references are stored as a JSON object either in a file named .ftppass. Please update this file with your username and password. 
 
 By design the following default WordPress Theme(s) are part of the exclusions array: 
 	* wordpress/wp-content/themes/twentyfourteen/*
