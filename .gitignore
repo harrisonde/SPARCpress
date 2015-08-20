@@ -7,12 +7,22 @@
 # ------------------------------
 bower_components/*
 
+# Codekit 
+# ------------------------------
+*config.codekit
+
 # Default
 # ------------------------------
 *~
 .DS_Store
 *.bak
 Thumbs.db
+
+# Grunt
+# ------------------------------
+.ftppass
+.sftpCache.json
+.ftpCache.json
 
 # Node 
 # ------------------------------
@@ -28,57 +38,69 @@ node_modules/*
 
 # WordPress core (as of 3.4.1)
 # ------------------------------
-/db-config.php
-/index.php
-/license.txt
-/readme.html
-/wp-activate.php
-/wp-app.php
-/wp-atom.php
-/wp-blog-header.php
-/wp-comments-post.php
-/wp-commentsrss2.php
-/wp-config-sample.php
-/wp-cron.php
-/wp-feed.php
-/wp-links-opml.php
-/wp-load.php
-/wp-login.php
-/wp-mail.php
-/wp-rdf.php
-/wp-rss.php
-/wp-rss2.php
-/wp-pass.php
-/wp-register.php
-/wp-settings.php
-/wp-signup.php
-/wp-trackback.php
-/xmlrpc.php
-/wp-admin
-/wp-includes
-/wp-content/index.php
-/wp-content/themes/twentyten
-/wp-content/themes/index.php
-/wp-content/plugins/index.php
+wordpress/.htaccess
+wordpress/wp-admin/*
+wordpress/index.php
+wordpress/license.txt
+wordpress/readme.html
+wordpress/wc-logs/*
+wordpress/wp-activate.php
+wordpress/wp-blog-header.php
+wordpress/wp-comments-post.php
+wordpress/wp-config-sample.php
+wordpress/wp-config.php
+wordpress/wp-cron.php
+wordpress/wp-includes/*
+wordpress/wp-links-opml.php
+wordpress/wp-load.php
+wordpress/wp-login.php
+wordpress/wp-mail.php
+wordpress/wp-settings.php
+wordpress/wp-signup.php
+wordpress/wp-trackback.php
+wordpress/xmlrpc.php
 
 # WordPress specific
-# -------------------
-wordpress/* 
-wp-content/uploads/
-wp-content/blogs.dir/
-wp-content/upgrade/*
-wp-content/backup-db/*
-wp-content/advanced-cache.php
-wp-content/wp-cache-config.php
-wp-content/cache/*
-wp-content/cache/supercache/*
+# ------------------- 
+wordpress/wp-content/uploads/
+wordpress/wp-content/blogs.dir/
+wordpress/wp-content/upgrade/*
+wordpress/wp-content/backup-db/*
+wordpress/wp-content/advanced-cache.php
+wordpress/wp-content/wp-cache-config.php
+wordpress/wp-content/cache/*
+wordpress/wp-content/cache/supercache/*
 
 # WordPress Theme(s)
 # ------------------------------
-wp-content/themes/twentythirteen
-wp-content/themes/twentytwelve
-wp-content/themes/twentyeleven
-wp-content/themes/twentyten
+wordpress/wp-content/themes/twentyfourteen/*
+wordpress/wp-content/themes/twentythirteen/*
+wordpress/wp-content/themes/twentytwelve/*
+wordpress/wp-content/themes/twentyeleven/*
+wordpress/wp-content/themes/twentyten/*
+wordpress/wp-content/themes/mystile/css/gdc-style.css
+wordpress/wp-content/themes/mystile/custom.css
+wordpress/wp-content/themes/mystile-child/css/gdc-style.css
+wordpress/wp-content/themes/mystile-child/custom.css
+
+# Woocommerce
+# ------------------------------
+wordpress/wp-content/plugins/woocommerce/.coveralls.yml
+wordpress/wp-content/plugins/woocommerce/.editorconfig
+wordpress/wp-content/plugins/woocommerce/.git
+wordpress/wp-content/plugins/woocommerce/.gitignore
+wordpress/wp-content/plugins/woocommerce/.jshintrc
+wordpress/wp-content/plugins/woocommerce/.scrutinizer.yml
+wordpress/wp-content/plugins/woocommerce/.travis.yml
+wordpress/wp-content/plugins/woocommerce/CONTRIBUTING.md
+wordpress/wp-content/plugins/woocommerce/Gruntfile.js
+# wordpress/wp-content/plugins/woocommerce/dummy-data/*
+wordpress/wp-content/plugins/woocommerce/package.json
+wordpress/wp-content/plugins/woocommerce/phpunit.xml
+wordpress/wp-content/plugins/woocommerce/phpunit.xml.dist
+wordpress/wp-content/plugins/woocommerce/README.md
+wordpress/wp-content/plugins/woocommerce/tests/*
+wordpress/wp-content/plugins/woocommerce/apigen/*
 
 # large/disallowed file types
 # a CDN should be used for these
