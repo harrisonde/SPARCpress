@@ -66,9 +66,9 @@ symfony_root_folder   = "/vagrant/symfony" # Where to install Symfony.
 
 nodejs_version        = "latest"   # By default "latest" will equal the latest stable version
 nodejs_packages       = [          # List any global NodeJS packages that you want to install
-  #"grunt-cli",
+  "grunt-cli",
   #"gulp",
-  #"bower",
+  "bower",
   #"yo",
 ]
 
@@ -171,10 +171,10 @@ Vagrant.configure("2") do |config|
   ##########
 
   # Provision Apache Base
-  config.vm.provision "shell", path: "#{github_url}/scripts/apache.sh", args: [server_ip, public_folder, hostname, github_url]
+  # config.vm.provision "shell", path: "#{github_url}/scripts/apache.sh", args: [server_ip, public_folder, hostname, github_url]
 
   # Provision Nginx Base
-  # config.vm.provision "shell", path: "#{github_url}/scripts/nginx.sh", args: [server_ip, public_folder, hostname, github_url]
+  config.vm.provision "shell", path: "#{github_url}/scripts/nginx.sh", args: [server_ip, public_folder, hostname, github_url]
 
 
   ####
@@ -261,7 +261,7 @@ Vagrant.configure("2") do |config|
   ##########
 
   # Install Nodejs
-  # config.vm.provision "shell", path: "#{github_url}/scripts/nodejs.sh", privileged: false, args: nodejs_packages.unshift(nodejs_version, github_url)
+  config.vm.provision "shell", path: "#{github_url}/scripts/nodejs.sh", privileged: false, args: nodejs_packages.unshift(nodejs_version, github_url)
 
   # Install Ruby Version Manager (RVM)
   # config.vm.provision "shell", path: "#{github_url}/scripts/rvm.sh", privileged: false, args: ruby_gems.unshift(ruby_version)
@@ -294,7 +294,7 @@ Vagrant.configure("2") do |config|
   # Add these to the same directory as the Vagrantfile.
   ##########
   #config.vm.provision "shell", path: "./local-script.sh"
-  config.vm.provision "shell", path: "./scripts/bootstrap.sh"
+  #Can we run /helpers as part of the install?
   #config.vm.provision "shell", path: "./helpers/deploy.sh"
 
 end
